@@ -1,5 +1,5 @@
-# Snowflake-dbt-ELT-E2E-with-Randomized-Data
-Snowflake x dbt E2E ELT project with randomized data
+# Snowflake-dbt-Load-and-Transform-E2E-with-Randomized-Data
+Snowflake x dbt E2E LT project with randomized data
 <br/>
 <br/>
 Storing the data in centralised environment; Data extraction from PDFs using Cortex AI; Data transformations;
