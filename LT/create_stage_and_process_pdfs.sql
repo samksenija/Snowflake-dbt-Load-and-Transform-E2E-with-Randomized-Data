@@ -71,7 +71,7 @@ INSERT INTO pdf_dummy_data (
 ALTER TASK load_new_file_data RESUME;
 
 --Create view to easily query the extracted data
-CREATE VIEW pdf_reviews_view AS
+CREATE VIEW pdf_transaction_view AS
 SELECT 
     file_name,
     file_size,
