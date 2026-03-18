@@ -36,7 +36,7 @@ In some sense, this is a take on ELT, and extraction of data does happen in a se
 In order to extract data continuously, whenever new files have been added to the stage, streams and tasks have been utilized. Stream will 'capture' that new files have been added to the stage (`INSERT`) and will trigger a task. Tasks 'job' is to extract file metadata, as well as data provided by the `AI_EXTRACT`. In order to utilize furhter extracted information, task will save data in a previously created table. However, job here is not done. As `AI_EXTRACT` returns data, in this case, in JSON format, a view is created on the table that will 'help' present JSON data in table format. 
 <br/>
 ```
-  CREATE VIEW pdf_reviews_view AS
+  CREATE VIEW pdf_transaction_view AS
   SELECT 
       file_name,
       file_size,
