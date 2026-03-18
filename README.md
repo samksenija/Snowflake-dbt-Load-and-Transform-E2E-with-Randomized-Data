@@ -36,7 +36,7 @@ In some sense, this is a take on ELT, and extraction of data does happen in a se
 In order to extract data continuously, whenever new files have been added to the stage, streams and tasks have been utilized. Stream will 'capture' that new files have been added to the stage (`INSERT`) and will trigger a task. Tasks 'job' is to extract file metadata, as well as data provided by the `AI_EXTRACT`. In order to utilize furhter extracted information, task will save data in a previously created table. However, job here is not done. As `AI_EXTRACT` returns data, in this case, in JSON format, a view is created on the table that will 'help' present JSON data in table format. 
 <br/>
 ```
-  CREATE VIEW pdf_reviews_view AS
+  CREATE VIEW pdf_transaction_view AS
   SELECT 
       file_name,
       file_size,
@@ -48,10 +48,18 @@ In order to extract data continuously, whenever new files have been added to the
       json_content:"date"::DATETIME AS "date",
 FROM pdf_dummy_data;
 ```
-## Steps for Load & Extract
+### Steps for Load & Extract
 1. Create internal stage
 2. Create function that will apply `AI_EXTRACT` on files stored in the stage, given that the structure of files and what data needs to be extracted is known
 3. Create stream on the stage
 4. Create table where file metadata and `AI_EXTRACT` initial result will be stored
 5. Create task that will run on stream change capture (`INSERT` into stage in this case) and poulate table created in previous step
 6. Create a view that will 'show' extracted data from `AI_EXTRACT` JSON
+<br/>
+
+### Transform
+In order to use dbt with VS Code I have used following command:
+<br/>
+<br/>
+`pip install dbt-core dbt-Snowflake`
+
