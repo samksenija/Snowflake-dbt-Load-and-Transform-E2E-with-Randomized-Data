@@ -48,10 +48,13 @@ In order to extract data continuously, whenever new files have been added to the
       json_content:"date"::DATETIME AS "date",
 FROM pdf_dummy_data;
 ```
-## Steps for Load & Extract
+### Steps for Load & Extract
 1. Create internal stage
 2. Create function that will apply `AI_EXTRACT` on files stored in the stage, given that the structure of files and what data needs to be extracted is known
 3. Create stream on the stage
 4. Create table where file metadata and `AI_EXTRACT` initial result will be stored
 5. Create task that will run on stream change capture (`INSERT` into stage in this case) and poulate table created in previous step
 6. Create a view that will 'show' extracted data from `AI_EXTRACT` JSON
+<br/>
+
+### Transform
