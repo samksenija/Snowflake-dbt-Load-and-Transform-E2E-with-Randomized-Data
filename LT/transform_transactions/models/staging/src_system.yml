@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: randomized_transactions
+    database: dummy_datasets
+    schema: schema_for_dummy_data
+    tables:
+      - name: pdf_transactions_view

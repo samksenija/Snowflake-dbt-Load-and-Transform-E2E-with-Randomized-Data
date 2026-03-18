@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: randomized_transactions # The logical name for the source system
+    database: dummy_datasets      # Optional: the physical database name (overrides target default)
+    schema: schema_for_dummy_data # Optional: the physical schema name (default is same as 'name')
+
+    tables:
+      - name: pdf_transactions_view # The physical table/view name in the database
+        description: >
+          Raw PDF transactions data.
+        columns:
+          - name: file_name
+            tests:
+              - not_null
+          - name: file_size
+            tests:
+              - not_null
+          - name: last_modified
+            tests:
+              - not_null
+          - name: account_description
+            tests:
+              - not_null
+          - name: debit
+            tests:
+              - not_null
+          - name: credit
+            tests:
+              - not_null
+          - name: reference
+            tests:
+              - not_null
+          - name: date
+            tests:
+              - not_null
+

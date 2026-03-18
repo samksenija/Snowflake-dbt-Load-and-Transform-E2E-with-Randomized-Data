@@ -31,6 +31,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   transform_transactions:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    # Applies to everything in the 'models/' folder
+    +database: dummy_datasets
+    +schema: schema_for_dummy_data
+    
+    # Applies specifically to models in 'models/staging/'
+  staging:
+    +database: dummy_datasets
+    +schema: schema_for_dummy_data
