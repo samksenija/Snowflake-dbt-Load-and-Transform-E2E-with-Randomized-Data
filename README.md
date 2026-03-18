@@ -58,3 +58,8 @@ FROM pdf_dummy_data;
 <br/>
 
 ### Transform
+In order to use dbt with VS Code I have used following command:
+<br/>
+<br/>
+`pip install dbt-core dbt-Snowflake`
+
