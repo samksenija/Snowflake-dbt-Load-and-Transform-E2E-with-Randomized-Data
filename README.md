@@ -2,7 +2,7 @@
 Snowflake x dbt E2E LT project with randomized data
 <br/>
 <br/>
-Storing the data in centralised environment; Data extraction from PDFs using Cortex AI; Data transformations;
+Storing the data in centralised environment; Data extraction from PDFs using Snowflake AI features; Data transformations;
 <br/>
 <br/>
 This project uses datasets & PDFs generated from these repositories:
