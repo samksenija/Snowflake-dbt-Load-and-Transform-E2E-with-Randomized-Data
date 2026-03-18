@@ -45,13 +45,12 @@ ALTER STAGE my_pdf_stage REFRESH;
 
 --Create table to store initialy extracted data and file metadata
 CREATE OR REPLACE TABLE pdf_dummy_data (
-  file_name VARCHAR,
-  file_size VARIANT,
-  last_modified VARCHAR,
-  json_content VARIANT
+  "file_name" VARCHAR,
+  "file_size" VARIANT,
+  "last_modified" VARCHAR,
+  "json_content" VARIANT
 );
 
---Create task to process new files in stage and insert data into pdf_dummy_data table
 CREATE OR REPLACE TASK load_new_file_data
   WAREHOUSE = COMPUTE_WH
   SCHEDULE = '1 minutes'
@@ -60,26 +59,27 @@ WHEN SYSTEM$STREAM_HAS_DATA('MY_PDF_STREAM')
 AS
 INSERT INTO pdf_dummy_data (
   SELECT
-    RELATIVE_PATH AS file_name,
-    size AS file_size,
-    last_modified,
-    extract_document_data('@my_pdf_stage', RELATIVE_PATH) AS json_content
+    RELATIVE_PATH AS "file_name",
+    size AS "file_size",
+    "last_modified",
+    extract_document_data('@my_pdf_stage', RELATIVE_PATH) AS "json_content"
   FROM my_pdf_stream
   WHERE METADATA$ACTION = 'INSERT'
 );
 
 ALTER TASK load_new_file_data RESUME;
 
---Create view to easily query the extracted data
-CREATE VIEW pdf_transaction_view AS
+SELECT * FROM pdf_dummy_data;
+
+CREATE VIEW pdf_transactions_view AS
 SELECT 
-    file_name,
-    file_size,
-    last_modified,
-    json_content:"account_description"::STRING AS "account_description",
-    json_content:"debit"::FLOAT AS "debit",
-    json_content:"credit"::FLOAT AS "credit",
-    json_content:"reference"::STRING AS "reference",
-    json_content:"date"::DATETIME AS "date",
+    "file_name",
+    "file_size",
+    "last_modified",
+    "json_content":"account_description"::STRING AS "account_description",
+    "json_content":"debit"::FLOAT AS "debit",
+    "json_content":"credit"::FLOAT AS "credit",
+    "json_content":"reference"::STRING AS "reference",
+    "json_content":"date"::DATETIME AS "date",
 FROM pdf_dummy_data;
 
