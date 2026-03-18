@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: randomized_transactions # The logical name for the source system
-    database: dummy_datasets      # Optional: the physical database name (overrides target default)
-    schema: schema_for_dummy_data # Optional: the physical schema name (default is same as 'name')
+  - name: randomized_transactions 
+    database: dummy_datasets      
+    schema: schema_for_dummy_data 
 
     tables:
       - name: pdf_transactions_view # The physical table/view name in the database
