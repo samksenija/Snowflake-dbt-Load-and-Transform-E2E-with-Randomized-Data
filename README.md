@@ -11,3 +11,6 @@ https://github.com/samksenija/Randomized-Datasets-in-Snowflake-1.0
 <br/>
 https://github.com/samksenija/Create-My-Own-Dummy-PDFs
 <br/>
+<br/>
+Helpful documentation: https://www.snowflake.com/en/developers/guides/create-a-document-processing-pipeline-with-ai-extract/
+<br/>
