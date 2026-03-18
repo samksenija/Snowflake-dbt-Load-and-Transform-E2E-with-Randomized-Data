@@ -61,7 +61,7 @@ INSERT INTO pdf_dummy_data (
   SELECT
     RELATIVE_PATH AS "file_name",
     size AS "file_size",
-    "last_modified",
+    last_modified as "last_modified",
     extract_document_data('@my_pdf_stage', RELATIVE_PATH) AS "json_content"
   FROM my_pdf_stream
   WHERE METADATA$ACTION = 'INSERT'
