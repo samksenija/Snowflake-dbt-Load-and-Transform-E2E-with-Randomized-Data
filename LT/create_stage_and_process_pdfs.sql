@@ -83,9 +83,3 @@ SELECT
     json_content:"date"::DATETIME AS "date",
 FROM pdf_dummy_data;
 
-
-
-
-
-
-
