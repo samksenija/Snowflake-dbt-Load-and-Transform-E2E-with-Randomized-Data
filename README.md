@@ -15,7 +15,7 @@ https://github.com/samksenija/Create-My-Own-Dummy-PDFs (Create dummy PDFs using 
 Helpful documentation: https://www.snowflake.com/en/developers/guides/create-a-document-processing-pipeline-with-ai-extract/
 ## Process
 ### Load & Extract
-The process consists of storing all data sources in centralised environment. Once data sources are stored in dedicated internal stage, needed data is extracted data from unstructured sources (PDFs in this case, sample of PDF can be found in `LT` folder). To extract data Snowflake's `AI_EXTRACT` is used, which is feature that allows to trough set of questions extract needed data. This is  example how `AI_EXTRACT` was used in my code:
+The process consists of storing all data sources in centralised environment. Once data sources are stored in dedicated internal stage, needed data is extracted data from unstructured sources (PDFs in this case, sample of PDF can be found in `LT` folder (`transaction_REF51.pdf`)). To extract data Snowflake's `AI_EXTRACT` is used, which is feature that allows to trough set of questions extract needed data. This is  example how `AI_EXTRACT` was used in my code:
 ```
 SELECT AI_EXTRACT(
       file => TO_FILE(stage_name, file_path),
