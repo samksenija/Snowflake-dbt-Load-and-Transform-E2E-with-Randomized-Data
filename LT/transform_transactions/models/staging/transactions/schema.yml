@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_transactions__pdf_transaction_view
+    description: "Building block for transactions"
+    columns:
+      - name: file_name
+      - name: file_size
+      - name: last_modified
+      - name: account_description
+      - name: debit
+      - name: credit
+      - name: reference
+      - name: date
