@@ -13,7 +13,8 @@ transactions as (
         "credit" as credit,
         "debit" as debit,
         "reference" as reference,
-        "date" as transaction_date
+        "date" as transaction_date,
+        "accountant_id" as accountant_id
     from source
 
 )

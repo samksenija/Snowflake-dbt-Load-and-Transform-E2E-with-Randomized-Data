@@ -34,4 +34,6 @@ sources:
           - name: date
             tests:
               - not_null
-
+          - name: accountant_id
+            tests:
+              - not_null

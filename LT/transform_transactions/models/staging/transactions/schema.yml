@@ -12,3 +12,4 @@ models:
       - name: credit
       - name: reference
       - name: date
+      - name: accountant_id
