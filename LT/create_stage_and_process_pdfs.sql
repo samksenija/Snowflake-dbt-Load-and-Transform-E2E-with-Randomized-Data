@@ -29,7 +29,8 @@ AS $$
         ['debit', 'What is the debit value?'],
         ['account_description', 'What is the account description?'],
         ['date', 'What is the date of the transaction?'],
-        ['reference', 'What is the reference?']]
+        ['reference', 'What is the reference?'],
+        ['accountant_id', 'What is accountant ID?']]
     ):response
 $$;
 
@@ -81,5 +82,6 @@ SELECT
     "json_content":"credit"::FLOAT AS "credit",
     "json_content":"reference"::STRING AS "reference",
     "json_content":"date"::DATETIME AS "date",
+    "json_content":"accountant_id"::STRING AS "accountant_id"
 FROM pdf_dummy_data;
 
