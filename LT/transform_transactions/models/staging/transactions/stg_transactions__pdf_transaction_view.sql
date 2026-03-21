@@ -13,7 +13,7 @@ transactions as (
         "credit" as credit,
         "debit" as debit,
         "reference" as reference,
-        "date" as transaction_date,
+        TO_CHAR("date", 'DD.MM.YYYY') as transaction_date,
         "accountant_id" as accountant_id
     from source
 
