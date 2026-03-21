@@ -37,3 +37,16 @@ sources:
           - name: accountant_id
             tests:
               - not_null
+      - name: dummy_user_data # The physical table/view name in the database
+        description: >
+          Randomized user data.
+        columns:
+          - name: first_name
+            tests:
+              - not_null
+          - name: last_name
+            tests:
+              - not_null
+          - name: email
+            tests:
+              - not_null
