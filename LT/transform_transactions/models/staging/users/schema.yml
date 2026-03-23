@@ -4,6 +4,7 @@ models:
   - name: stg_users__dummy_user_data
     description: "Building block for users"
     columns:
+      - name: user_id
       - name: first_name
       - name: last_name
       - name: email

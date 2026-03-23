@@ -29,4 +29,4 @@ transaction_and_accountants_joined as (
 
 )
 
-select * from customers_and_customer_orders_joined
+select * from transaction_and_accountants_joined

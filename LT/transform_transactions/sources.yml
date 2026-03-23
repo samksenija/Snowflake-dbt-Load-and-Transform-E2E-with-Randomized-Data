@@ -41,6 +41,9 @@ sources:
         description: >
           Randomized user data.
         columns:
+          - name: user_id
+            tests:
+              - not_null
           - name: first_name
             tests:
               - not_null

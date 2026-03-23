@@ -9,6 +9,7 @@ source as (
 randomized_users as (
 
     select
+        "user_id" as user_id,
         "first_name" as first_name,
         "last_name" as last_name,
         "email" as email
