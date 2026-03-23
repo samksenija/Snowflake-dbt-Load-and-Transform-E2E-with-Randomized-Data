@@ -57,7 +57,9 @@ FROM pdf_dummy_data;
 6. Create a view that will 'show' extracted data from `AI_EXTRACT` JSON
 <br/>
 
-### Transform
+### Transform - dbt
+For transformation layer, I have used dbt.
+<br/>
 In order to use dbt with VS Code I have used following command:
 <br/>
 <br/>
