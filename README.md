@@ -64,4 +64,18 @@ In order to use dbt with VS Code I have used following command:
 <br/>
 <br/>
 `pip install dbt-core dbt-Snowflake`
+<br/>
+<br/>
+For transformation of data, I utlized dbt recommended structure, with staging, intermediate & marts folders. In staging, I introuduced the base tables which I would be using, users which is accountant data (created here https://github.com/samksenija/Randomized-Datasets-in-Snowflake-1.0/tree/main/dummy_user), and pdf_transaction_view (above) which is data extracted from PDF files.
+<br/>
+<br/>
+In intemediate folder I utilized dummy user randomized dataset with information such as user_id, first_name, last_name & email to enrich transaction data which has accountant_id, in this case joining was conduted on the base that user_id = accountant_id.
+<br/>
+<br/>
+In marts, I conducted a rather simple test logic, where I summarized debits and crdits respectively by specific accountant, and then also created a file where I summarized debit and credit by account description.
+<br/>
+<br/>
+Now, that data is transformed, dbt can be connected to the dashboard tool of choice in order to make cleaned and transformed data user & analytics ready.
+<br/>
 
+### Dashboard 
