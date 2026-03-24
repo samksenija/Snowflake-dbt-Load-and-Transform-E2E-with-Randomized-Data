@@ -53,11 +53,13 @@ FROM pdf_dummy_data;
 2. Create function that will apply `AI_EXTRACT` on files stored in the stage, given that the structure of files and what data needs to be extracted is known
 3. Create stream on the stage
 4. Create table where file metadata and `AI_EXTRACT` initial result will be stored
-5. Create task that will run on stream change capture (`INSERT` into stage in this case) and poulate table created in previous step
+5. Create task that will run on stream change capture (`INSERT INTO` for stage in this case) and poulate table created in previous step
 6. Create a view that will 'show' extracted data from `AI_EXTRACT` JSON
 <br/>
 
-### Transform
+### Transform - dbt
+For transformation layer, I have used dbt.
+<br/>
 In order to use dbt with VS Code I have used following command:
 <br/>
 <br/>
