@@ -77,5 +77,3 @@ In marts, I conducted a rather simple test logic, where I summarized debits and 
 <br/>
 Now, that data is transformed, dbt can be connected to the dashboard tool of choice in order to make cleaned and transformed data user & analytics ready.
 <br/>
-
-### Dashboard 
