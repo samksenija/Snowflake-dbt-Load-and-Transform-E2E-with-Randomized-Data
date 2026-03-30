@@ -72,7 +72,7 @@ For transformation of data, I utlized dbt recommended structure, with staging, i
 In intemediate folder I utilized dummy user randomized dataset with information such as user_id, first_name, last_name & email to enrich transaction data which has accountant_id, in this case joining was conduted on the base that user_id = accountant_id.
 <br/>
 <br/>
-In marts, I conducted a rather simple test logic, where I summarized debits and crdits respectively by specific accountant, and then also created a file where I summarized debit and credit by account description.
+In marts, I conducted a rather simple test logic, where I summarized debits and credits respectively by specific accountant, and then also created a file where I summarized debit and credit by account description.
 <br/>
 <br/>
 Now, that data is transformed, dbt can be connected to the dashboard tool of choice in order to make cleaned and transformed data user & analytics ready.
